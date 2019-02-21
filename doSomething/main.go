@@ -1,14 +1,13 @@
 package main
 
 import (
-	f "fmt"
+	"fmt"
 )
 
-func doSomething() (x, y int) {
-	y = 5
+func doSomething() (a int) {
 	return
 }
 
 func main() {
-	f.Println(doSomething())
+	fmt.Println(doSomething())
 }
