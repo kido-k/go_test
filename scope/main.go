@@ -1,10 +1,16 @@
 package main
 
-import "./foo"
+import (
+	"fmt"
 
-foo.Max
-foo.internal_const
+	"./foo"
+)
 
-foo.FooFunc(5)
-foo.internalFunc(5)
+func main() {
 
+	fmt.Println(foo.MAX)
+	// fmt.Println(foo.internal_max)
+
+	fmt.Println(foo.FooFunc(5))
+	// fmt.Println(foo.internalFunc(5))
+}
