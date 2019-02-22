@@ -89,6 +89,15 @@ func checkCompleteSlice() {
 	fmt.Println("")
 }
 
+func checkSumFunc(s ...int) int { //引数を[]intだとエラー、意味は同じ
+	n := 0
+	for _, v := range s {
+		n += v
+	}
+
+	return n
+}
+
 func main() {
 	// createSlice()
 	// checkSliceCapa()
@@ -96,4 +105,10 @@ func main() {
 	// addSlice()
 	// checkCapacity()
 	checkCompleteSlice()
+
+	fmt.Println("sum = ", checkSumFunc(1, 2, 3))
+	fmt.Println("sum = ", checkSumFunc(1, 2, 3, 4, 5))
+	s := []int{1, 2, 3, 4, 5}
+	fmt.Println("sum = ", checkSumFunc(s...))
+	fmt.Println("sum = ", checkSumFunc())
 }
