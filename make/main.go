@@ -71,10 +71,29 @@ func checkCapacity() {
 	fmt.Printf("(E) len=%d, cap=%d\n", len(s), cap(s))
 }
 
+func checkCompleteSlice() {
+	a := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+	s1 := a[2:4]
+	fmt.Println("s1= ", s1)
+	fmt.Printf("len=%d, cap=%d\n", len(s1), cap(s1))
+
+	s2 := a[2:4:4]
+	fmt.Println("s= ", s2)
+	fmt.Printf("len=%d, cap=%d\n", len(s2), cap(s2))
+
+	s3 := a[2:4:6]
+	fmt.Println("s= ", s3)
+	fmt.Printf("len=%d, cap=%d\n", len(s3), cap(s3))
+
+	fmt.Println("")
+}
+
 func main() {
 	// createSlice()
 	// checkSliceCapa()
 	// createEasySlice()
 	// addSlice()
-	checkCapacity()
+	// checkCapacity()
+	checkCompleteSlice()
 }
